@@ -499,6 +499,41 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        width: 70%;
+        background: var(--bg-charcoal);
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        transition: 0.5s ease-in-out;
+        z-index: 999;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+        border-left: 1px solid var(--glass-border);
+    }
+
+    .nav-links.nav-active {
+        right: 0;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .mobile-menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: var(--text-white);
+        margin: 5px;
+        transition: var(--transition);
+    }
+
     .booking-steps {
         gap: 40px;
     }
@@ -510,4 +545,15 @@ footer {
     .glass {
         padding: 24px;
     }
+
+    /* Prevent words running into logo */
+    .logo {
+        position: relative;
+        z-index: 1001;
+    }
+}
+
+/* Initially hide toggle on desktop if it wasn't already */
+.mobile-menu-toggle {
+    display: none;
 }
