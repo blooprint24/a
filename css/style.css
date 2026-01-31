@@ -406,84 +406,58 @@ h3,
     background: var(--bg-dark);
 }
 
-/* Gallery / Comparison Slider */
-.comparison-container {
+/* Showcase Grid */
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.showcase-item {
+    position: relative;
+    height: 450px;
     padding: 0;
     overflow: hidden;
-    position: relative;
-    height: 500px;
+    cursor: pointer;
 }
 
-.comparison-slider {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.image-before,
-.image-after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.image-before img,
-.image-after img {
+.showcase-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.image-after {
-    width: 50%;
-    border-right: 3px solid var(--primary);
-    overflow: hidden;
-}
-
-.slider-handle {
+.showcase-content {
     position: absolute;
-    top: 0;
-    left: 50%;
     bottom: 0;
-    width: 40px;
-    height: 40px;
-    background: var(--primary);
-    border-radius: 50%;
-    transform: translate(-50%, 230px);
-    z-index: 10;
-    cursor: ew-resize;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 20px rgba(255, 49, 49, 0.5);
+    left: 0;
+    width: 100%;
+    padding: 40px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: var(--transition);
 }
 
-.slider-handle::before {
-    content: '↔';
-    color: var(--bg-dark);
-    font-weight: 800;
+.showcase-item:hover img {
+    transform: scale(1.1);
 }
 
-.image-before .label,
-.image-after .label {
-    position: absolute;
-    bottom: 20px;
-    padding: 8px 16px;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-    font-weight: 700;
-    font-size: 0.8rem;
-    text-transform: uppercase;
+.showcase-item:hover .showcase-content {
+    transform: translateY(0);
+    opacity: 1;
 }
 
-.image-before .label {
-    right: 20px;
+.showcase-content h3 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 8px;
 }
 
-.image-after .label {
-    left: 20px;
+.showcase-content p {
+    color: var(--text-white);
+    font-weight: 600;
 }
 
 /* FAQ */
