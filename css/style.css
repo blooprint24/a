@@ -1,9 +1,9 @@
 :root {
-    --primary: #00ecff;
-    /* Electric Blue/Aqua */
-    --primary-dark: #00b8c7;
-    --accent: #39ff14;
-    /* Neon Green */
+    --primary: #ff3131;
+    /* Premium Red */
+    --primary-dark: #cc0000;
+    --accent: #ffae00;
+    /* Warm Accent (instead of neon green, to match red better) */
     --bg-dark: #0a0a0b;
     --bg-charcoal: #141416;
     --text-white: #ffffff;
@@ -131,7 +131,7 @@ h3,
 .btn-primary:hover {
     background: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 236, 255, 0.3);
+    box-shadow: 0 10px 20px rgba(255, 49, 49, 0.3);
 }
 
 .btn-outline {
@@ -457,7 +457,7 @@ h3,
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 20px rgba(0, 236, 255, 0.5);
+    box-shadow: 0 0 20px rgba(255, 49, 49, 0.5);
 }
 
 .slider-handle::before {
