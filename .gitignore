@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+*.log
+.env
+dist/
+.vscode/
+.idea/
+# Ignore generated brain assets if any leak in
+.gemini/
+brain/
