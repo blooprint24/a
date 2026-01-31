@@ -79,14 +79,30 @@ h3,
 }
 
 .logo {
-    font-size: 1.5rem;
-    color: var(--text-white);
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-main {
+    font-size: 1.6rem;
+    color: var(--text-white);
     letter-spacing: -1px;
 }
 
 .logo span {
     color: var(--primary);
+}
+
+.logo-subline {
+    font-size: 0.55rem;
+    color: var(--text-gray);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 2px;
+    opacity: 0.8;
 }
 
 .nav-links {
